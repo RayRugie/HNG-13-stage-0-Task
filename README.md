@@ -54,9 +54,11 @@ Dislikes list	test-user-dislikes
 
 The current time updates automatically every second using:
 
+```
 setInterval(() => {
   document.getElementById("time").textContent = Date.now();
 }, 1000);
+```
 
 
 Avatar supports both local and external image URLs.
