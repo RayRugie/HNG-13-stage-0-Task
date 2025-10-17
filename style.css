@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #121212, #1e1e2f);
+  color: #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  background: #1a1a2e;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  background: #252547;
+  padding: 1rem;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #00bcd4;
+  object-fit: cover;
+}
+
+.profile-details {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.profile-details h2 {
+  color: #00bcd4;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.bio {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #c5c5c5;
+}
+
+.time {
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  color: #aaa;
+}
+
+.social-links ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.social-links a {
+  color: #00bcd4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  color: #fff;
+  outline: none;
+}
+
+.hobbies, .dislikes {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.hobbies h3, .dislikes h3 {
+  color: #00bcd4;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.hobbies ul, .dislikes ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  color: #c5c5c5;
+}
+
+@media (min-width: 768px) {
+  .profile-card {
+    flex-direction: row;
+    max-width: 700px;
+  }
+
+  .avatar-wrapper {
+    flex: 1;
+    align-items: center;
+  }
+
+  .profile-details {
+    flex: 2;
+    text-align: left;
+  }
+}
